@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SEDMA Servicio de Detallado. Cuidado profesional para tu vehículo y productos especializados para mantenerlo impecable.">
+  <title>SEDMA | Servicio de Detallado</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">SEDMA · Cuidado profesional para cada detalle de tu vehículo</div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="SEDMA inicio"><img src="assets/logo-sedma.jpg" alt="SEDMA Servicio de Detallado"></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <nav id="mainNav">
+      <a href="#inicio">Inicio</a><a href="servicios.html">Servicios</a><a href="#tienda">Tienda</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cart-button" id="openCart" aria-label="Abrir carrito">🛒 <span>Carrito</span><b id="cartCount">0</b></button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> SEDMA · SERVICIO DE DETALLADO</p>
+        <h1>Tu vehículo.<br><em>Como nuevo.</em></h1>
+        <p class="hero-copy">Cuidado, limpieza y protección en cada detalle. Dale a tu auto la atención que merece.</p>
+        <div class="hero-actions"><a class="btn btn-blue" href="servicios.html">Conoce nuestros servicios</a><a class="btn btn-outline" href="#tienda">Explorar productos</a></div>
+      </div>
+      <div class="hero-note"><strong>01</strong><span>DETALLADO<br>CON ATENCIÓN AL DETALLE</span></div>
+      <a class="scroll-cue" href="#nosotros">DESCUBRE MÁS <span>↓</span></a>
+    </section>
+
+    <section class="intro section-wrap" id="nosotros">
+      <div><p class="eyebrow blue-text">EL CUIDADO QUE SE NOTA</p><h2>Más que limpieza,<br><em>es cuidar tu inversión.</em></h2></div>
+      <p>En SEDMA nos enfocamos en recuperar y conservar la apariencia de tu vehículo mediante procesos de limpieza, descontaminación y protección. Nuestro objetivo es que disfrutes un acabado cuidado y una experiencia de servicio confiable.</p>
+    </section>
+
+    <section class="services-section" id="servicios-resumen">
+      <div class="section-wrap">
+        <div class="section-heading"><div><p class="eyebrow blue-text">SERVICIOS DE DETALLADO</p><h2>Elige el cuidado<br>que tu auto necesita.</h2></div><p>Soluciones para mantener tu vehículo limpio, protegido y con una apariencia impecable.</p></div>
+        <div class="service-coming">
+          <div><span class="mini-icon">✦</span><h3>COMO NUEVO · $1,200 MXN</h3><p>Lavado, descontaminado de pintura, cera en pasta y protección de plásticos.</p></div>
+          <a href="servicios.html" class="text-link">Ver servicios de detallado <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop-section" id="tienda">
+      <div class="section-wrap">
+        <div class="shop-heading"><div><p class="eyebrow blue-text">SEDMA SHOP</p><h2>Tu garage,<br><em>tu propio ritual.</em></h2><p>Productos y accesorios para llevar el cuidado de tu auto a otro nivel.</p></div><div class="shop-search"><label for="productSearch">BUSCAR EN LA TIENDA</label><div class="search-box"><input id="productSearch" type="search" placeholder="¿Qué producto necesitas?"><button id="searchBtn" aria-label="Buscar">⌕</button></div></div></div>
+        <div class="shop-toolbar"><div class="category-tabs" id="categoryTabs"><button class="active" data-category="Todos">Todos</button><button data-category="Lavado">Lavado</button><button data-category="Interior">Interiores</button><button data-category="Protección">Protección</button><button data-category="Accesorios">Accesorios</button></div><span id="resultCount">6 productos</span></div>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="shop-footnote">Catálogo demostrativo · Productos, precios y disponibilidad sujetos a confirmación.</div>
+      </div>
+    </section>
+
+    <section class="process-section">
+      <div class="section-wrap process-inner">
+        <div><p class="eyebrow blue-text">COMPRA FÁCIL</p><h2>De nuestra tienda<br>a tu cochera.</h2><p class="muted">Este prototipo muestra cómo podría funcionar la compra en línea de productos SEDMA.</p></div>
+        <div class="steps">
+          <div class="step"><b>01</b><div><h3>Encuentra</h3><p>Busca por nombre o explora las categorías.</p></div></div>
+          <div class="step"><b>02</b><div><h3>Agrega al carrito</h3><p>Selecciona los productos y ajusta las cantidades.</p></div></div>
+          <div class="step"><b>03</b><div><h3>Confirma tu pedido</h3><p>Revisa el resumen y completa los datos de compra.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div class="section-wrap contact-grid">
+        <div><p class="eyebrow">HABLEMOS DE TU AUTO</p><h2>¿Listo para<br><em>darle otro brillo?</em></h2><p>Contáctanos para resolver tus dudas, solicitar una cotización o agendar tu servicio.</p><a class="btn btn-light" href="https://wa.me/" target="_blank" rel="noopener">Contactar por WhatsApp ↗</a></div>
+        <div class="contact-card"><h3>SEDMA</h3><p>Servicio de detallado</p><div class="contact-line"><span>✉</span> contacto@sedma.mx <small>EDITAR</small></div><div class="contact-line"><span>⌖</span> Dirección del taller <small>EDITAR</small></div><div class="contact-line"><span>◷</span> Horarios de atención <small>EDITAR</small></div><p class="contact-hint">Los datos de contacto son provisionales y deben sustituirse por los oficiales del negocio.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><img src="assets/logo-sedma.jpg" alt="SEDMA"><span>© 2026 SEDMA · Servicio de Detallado</span><a href="#inicio">VOLVER ARRIBA ↑</a></footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+    <div class="drawer-head"><div><p class="eyebrow blue-text">SEDMA SHOP</p><h2>Tu carrito <span id="drawerCount">(0)</span></h2></div><button id="closeCart" class="close-btn" aria-label="Cerrar">×</button></div>
+    <div id="cartItems" class="cart-items"><div class="empty-cart">Tu carrito está vacío.<br><span>Agrega productos para comenzar.</span></div></div>
+    <div class="cart-summary"><div><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div><small>Envío e impuestos se calculan al confirmar el pedido.</small><button class="btn btn-blue checkout-btn" id="checkoutBtn" disabled>Continuar compra →</button><p class="demo-note">Simulación de compra: no se realiza ningún cobro.</p></div>
+  </aside>
+
+  <div class="modal-backdrop" id="checkoutBackdrop">
+    <div class="checkout-modal">
+      <button class="close-btn modal-close" id="closeCheckout" aria-label="Cerrar">×</button>
+      <p class="eyebrow blue-text">ÚLTIMO PASO</p><h2>Finalizar pedido</h2><p class="muted">Completa tus datos para generar una orden de demostración.</p>
+      <form id="checkoutForm">
+        <label>Nombre completo<input name="name" required placeholder="Tu nombre"></label>
+        <label>Correo electrónico<input name="email" type="email" required placeholder="correo@ejemplo.com"></label>
+        <label>Teléfono<input name="phone" type="tel" required placeholder="10 dígitos"></label>
+        <label>Entrega<select name="delivery"><option>Recoger en taller</option><option>Envío a domicilio (por cotizar)</option></select></label>
+        <div class="checkout-total"><span>Total estimado</span><strong id="checkoutTotal">$0.00</strong></div>
+        <button class="btn btn-blue full-btn" type="submit">Generar pedido de prueba</button>
+      </form>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

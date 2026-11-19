@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SEDMA Servicio de Detallado. Cuidado profesional para tu vehículo y productos especializados para mantenerlo impecable.">
+  <title>Servicios de detallado | SEDMA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">SEDMA · Cuidado profesional para cada detalle de tu vehículo</div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="SEDMA inicio"><img src="assets/logo-sedma.jpg" alt="SEDMA Servicio de Detallado"></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <nav id="mainNav">
+      <a href="index.html">Inicio</a><a href="servicios.html" class="active">Servicios</a><a href="index.html#tienda">Tienda</a><a href="index.html#nosotros">Nosotros</a><a href="index.html#contacto">Contacto</a>
+    </nav>
+    <button class="cart-button" id="openCart" aria-label="Abrir carrito">🛒 <span>Carrito</span><b id="cartCount">0</b></button>
+  </header>
+
+  <main>
+    <!-- Video controlado por scroll: reemplaza assets/video/detallado.mp4 por el video real -->
+    <section class="scrollvideo" id="proceso" data-scroll-video aria-label="Proceso de detallado SEDMA">
+      <div class="sv-stage">
+        <video class="sv-video" muted playsinline preload="auto" tabindex="-1" aria-hidden="true"><source src="assets/video/detallado.mp4" type="video/mp4"></video>
+        <div class="sv-shade"></div>
+        <div class="sv-copy">
+          <div class="sv-caption" data-from="0" data-to="0.34"><b>01 / 03 · LIMPIEZA</b><h2>Lavado exterior<br><em>y partes bajas.</em></h2><p>Retiramos la suciedad acumulada, desde la carrocería hasta las zonas que casi nunca se ven.</p></div>
+          <div class="sv-caption" data-from="0.34" data-to="0.67"><b>02 / 03 · ACABADO</b><h2>Descontaminado<br><em>y cera en pasta.</em></h2><p>Preparamos la pintura y la protegemos para realzar su brillo.</p></div>
+          <div class="sv-caption" data-from="0.67" data-to="1.01"><b>03 / 03 · PROTECCIÓN</b><h2>Tu auto,<br><em>como nuevo.</em></h2><p>Plásticos protegidos y limpieza básica de interior para completar el resultado.</p></div>
+        </div>
+        <div class="sv-hint">DESLIZA PARA VER EL PROCESO <span>↓</span></div>
+        <div class="sv-progress"><i></i></div>
+      </div>
+    </section>
+
+    <section class="services-section" id="servicios">
+      <div class="section-wrap">
+        <div class="section-heading"><div><p class="eyebrow blue-text">SERVICIOS DE DETALLADO</p><h2>Elige el cuidado<br>que tu auto necesita.</h2></div><p>Soluciones para mantener tu vehículo limpio, protegido y con una apariencia impecable.</p></div>
+        <article class="service-feature">
+          <div class="service-photo"><img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1200&q=85" alt="Detalle de lavado y cuidado exterior de un automóvil"><span class="photo-tag">SERVICIO DESTACADO</span></div>
+          <div class="service-info">
+            <div class="service-topline"><span class="pill">SEDMA ESSENTIAL</span><span class="service-number">01 / 01</span></div>
+            <h3>COMO NUEVO <span>✨</span></h3>
+            <div class="price">$1,200 <small>MXN</small></div>
+            <p class="service-desc">Un servicio pensado para recuperar la limpieza, brillo y apariencia cuidada de tu vehículo, ideal para mantenerlo en excelentes condiciones.</p>
+            <h4>EL SERVICIO INCLUYE</h4>
+            <ul class="included">
+              <li>Lavado exterior</li><li>Lavado de partes bajas</li><li>Limpieza básica de interior</li>
+              <li>Descontaminado de pintura</li><li>Aplicación de cera en pasta</li><li>Protección de plásticos interiores y exteriores</li>
+            </ul>
+            <div class="service-result"><span>✦</span><p><strong>El objetivo:</strong> que tu auto vuelva a sentirse y verse como nuevo, con una protección y acabado que prolonguen su buena apariencia.</p></div>
+            <a class="btn btn-blue" href="index.html#contacto">Solicitar este servicio <span>↗</span></a>
+          </div>
+        </article>
+        <article class="service-feature">
+          <div class="service-photo"><img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1200&q=85" alt="Detalle de lavado y cuidado exterior de un automóvil"><span class="photo-tag">SERVICIO DESTACADO</span></div>
+          <div class="service-info">
+            <div class="service-topline"><span class="pill">SEDMA ESSENTIAL</span><span class="service-number">01 / 01</span></div>
+            <h3>COMO NUEVO <span>✨</span></h3>
+            <div class="price">$1,200 <small>MXN</small></div>
+            <p class="service-desc">Un servicio pensado para recuperar la limpieza, brillo y apariencia cuidada de tu vehículo, ideal para mantenerlo en excelentes condiciones.</p>
+            <h4>EL SERVICIO INCLUYE</h4>
+            <ul class="included">
+              <li>Lavado exterior</li><li>Lavado de partes bajas</li><li>Limpieza básica de interior</li>
+              <li>Descontaminado de pintura</li><li>Aplicación de cera en pasta</li><li>Protección de plásticos interiores y exteriores</li>
+            </ul>
+            <div class="service-result"><span>✦</span><p><strong>El objetivo:</strong> que tu auto vuelva a sentirse y verse como nuevo, con una protección y acabado que prolonguen su buena apariencia.</p></div>
+            <a class="btn btn-blue" href="index.html#contacto">Solicitar este servicio <span>↗</span></a>
+          </div>
+        </article>
+        <div class="service-coming">
+          <div><span class="mini-icon">✦</span><h3>¿Buscas un tratamiento específico?</h3><p>Podemos integrar más servicios al catálogo: limpieza profunda de interiores, pulido, corrección de pintura y protección especializada.</p></div>
+          <a href="index.html#contacto" class="text-link">Consultar disponibilidad <span>→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><img src="assets/logo-sedma.jpg" alt="SEDMA"><span>© 2026 SEDMA · Servicio de Detallado</span><a href="#">VOLVER ARRIBA ↑</a></footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+    <div class="drawer-head"><div><p class="eyebrow blue-text">SEDMA SHOP</p><h2>Tu carrito <span id="drawerCount">(0)</span></h2></div><button id="closeCart" class="close-btn" aria-label="Cerrar">×</button></div>
+    <div id="cartItems" class="cart-items"><div class="empty-cart">Tu carrito está vacío.<br><span>Agrega productos para comenzar.</span></div></div>
+    <div class="cart-summary"><div><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div><small>Envío e impuestos se calculan al confirmar el pedido.</small><button class="btn btn-blue checkout-btn" id="checkoutBtn" disabled>Continuar compra →</button><p class="demo-note">Simulación de compra: no se realiza ningún cobro.</p></div>
+  </aside>
+
+  <div class="modal-backdrop" id="checkoutBackdrop">
+    <div class="checkout-modal">
+      <button class="close-btn modal-close" id="closeCheckout" aria-label="Cerrar">×</button>
+      <p class="eyebrow blue-text">ÚLTIMO PASO</p><h2>Finalizar pedido</h2><p class="muted">Completa tus datos para generar una orden de demostración.</p>
+      <form id="checkoutForm">
+        <label>Nombre completo<input name="name" required placeholder="Tu nombre"></label>
+        <label>Correo electrónico<input name="email" type="email" required placeholder="correo@ejemplo.com"></label>
+        <label>Teléfono<input name="phone" type="tel" required placeholder="10 dígitos"></label>
+        <label>Entrega<select name="delivery"><option>Recoger en taller</option><option>Envío a domicilio (por cotizar)</option></select></label>
+        <div class="checkout-total"><span>Total estimado</span><strong id="checkoutTotal">$0.00</strong></div>
+        <button class="btn btn-blue full-btn" type="submit">Generar pedido de prueba</button>
+      </form>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+  <script src="scroll-video.js"></script>
+</body>
+</html>
