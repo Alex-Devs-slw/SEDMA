@@ -108,6 +108,25 @@ function renderProducts(){
         `;
     }).join("");
 }
+$("#productGrid").addEventListener("change", e => {
+    if (!e.target.classList.contains("variant-select")) return;
+    const productId = Number(
+        e.target.id.replace("variant-", "")
+    );
+    const product = products.find(p => p.id === productId);
+    const variants = product.variants || [
+        {
+            id: "unica",
+            presentation: "Presentación única",
+            price: product.price
+        }
+    ];
+    const selected = variants.find(
+        v => v.id === e.target.value
+    );
+    $(`#price-${productId}`).textContent =
+        money(selected.price);
+});
 function saveCart(){localStorage.setItem("sedmaCart",JSON.stringify(cart));renderCart()}
 function cartProducts(){return Object.entries(cart).map(([id,qty])=>({...products.find(p=>p.id===Number(id)),qty})).filter(p=>p.id)}
 function renderCart(){
