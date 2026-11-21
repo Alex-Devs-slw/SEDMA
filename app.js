@@ -11,12 +11,12 @@ const products = [
             price: 120
         },
         {
-            id: "1.5l",
+            id: "1.5L",
             presentation: "1.5 L",
             price: 227
         },
         {
-            id: "5l",
+            id: "5L",
             presentation: "5 L",
             price: 532
         }
@@ -26,19 +26,32 @@ const products = [
 },
 {
     id:2,
-    name:"Citron Shampoo Desengrasante 1.5L",
+    name:"CITRON Shampoo Desengrasante",
     brand:"VONIXX",
     category:"Limpieza General",
-    price:266,
+    variants: [
+        {
+            id: "1.5L",
+            presentation: "1.5 L",
+            price: 266
+        },
+    ],
     desc:"CITRON es un shampoo de alto poder formulado con tensoactivos especiales y solventes naturales extraídos de la cáscara de naranja. Es la solución ideal para lavados pesados, garantizando una limpieza profunda de la pintura automotriz.",
     img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
 },
 {
     id:3,
-    name:"Impact Desengrasante Flotante 1.5L",
+    name:"IMPACT Desengrasante Flotante",
     brand:"VONIXX",
     category:"Limpieza General",
     price:216,
+    variants: [
+        {
+            id: "1.5L",
+            presentation: "1.5 L",
+            price: 216
+        },
+    ],
     desc:"Su fórmula exclusiva promueve una alta eficacia en la eliminación de las manchas producidas por el impacto de los insectos, la grasa y la suciedad. IMPACT es un limpiador universal, respetuoso con el medio ambiente y no corrosivo diseñado para la limpieza dificil de varias superficies.",
     img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
 },
@@ -54,7 +67,7 @@ const products = [
             price: 140
         },
         {
-            id: "1.5l",
+            id: "1.5L",
             presentation: "1.5 L",
             price: 308
         },
@@ -69,46 +82,76 @@ const products = [
 },
 {
     id:5,
-    name:"Hydrox Wash Shampoo Cerámico 500ml",
+    name:"HYDROX WASH",
     brand:"VONIXX",
     category:"Limpieza General",
-    price: 468,
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 468
+        },
+    ],
     desc:"Vonixx Hydrox Wash es un innovador shampoo automotriz que combina limpieza profunda y protección cerámica en un solo paso. Su fórmula avanzada con Si02 simplifica el mantenimiento del vehículo, proporcionando un acabado de alto nivel con una durabilidad de hasta 4 meses.",
     img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
 },
 {
     id:6,
-    name:"V-ECO Fast 500ml",
+    name:"V-ECO FAST",
     brand:"VONIXX",
     category:"Limpieza General",
-    price: 148,
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 148
+        },
+    ],
     desc:"V-ECO FAST es un producto para el lavado ecológico de vehículos, biodegradable y respetuoso con el medio ambiente. Contiene en Su composición tensioactivos, solventes ecológicos y cera de carnauba que actúan juntos para una limpieza más eficaz y con menos posibilidades de riesgos en la pintura. V-ECO FAST promueve el brillo y la protección ligera.",
     img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
 },
 {
     id:7,
-    name:"V-ECO Pro 1.5L",
+    name:"V-ECO PRO",
     brand:"VONIXX",
     category:"Limpieza General",
-    price: 412,
+    variants: [
+        {
+            id: "1.5L",
+            presentation: "1.5 L",
+            price: 412
+        },
+    ],
     desc:"V-ECO PRO es una solución avanzada de limpieza en seco, ecológica y biodegradable. Su fórmula combina tensioactivos, solventes ecológicos y cera de carnauba, permitiendo una limpieza profunda y segura que minimiza el riesgo de rayaduras, mientras aporta un brillo renovado y protección duradera.",
     img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
 },
 {
     id:8,
-    name:"Alumax Desincrustante Ácido 20L",
+    name:"ALUMAX",
     brand:"VINTEX",
     category:"Limpieza General",
-    price: 2,143,
+    variants: [
+        {
+            id: "20L",
+            presentation: "20L",
+            price: 2143
+        },
+    ],
     desc:"Alumax es un desincrustante de carácter ácido, desarrollado para la limpieza de llantas, chasis, motores, compartimientos de aluminio, carrocerías de acero inoxidable y madera.",
     img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
 },
 {
     id:9,
-    name:"Removex Desengrasante y Limpiador de Chasis 20L",
+    name:"REMOVEX",
     brand:"VINTEX",
     category:"Limpieza General",
-    price: 1,722,
+    variants: [
+        {
+            id: "20L",
+            presentation: "20L",
+            price: 1722
+        },
+    ],
     desc:"Alumax es un desincrustante de carácter ácido, desarrollado para la limpieza de llantas, chasis, motores, compartimientos de aluminio, carrocerías de acero inoxidable y madera.",
     img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
 },
@@ -124,12 +167,12 @@ const products = [
             price: 202
         },
         {
-            id: "1.5l",
+            id: "1.5L",
             presentation: "1.5 L",
             price: 401
         },
     ],
-    desc:"IZER es un potente descontaminante de pH neutro diseñado para  liminar la oxidación de materiales ferrosos en diversas partes del vehículo. Su fórmula actúa profundamente eliminando el hollín de freno en las ruedas y la contaminación ferrosa en la pintura y otras superficies externas.",
+    desc:"IZER es un potente descontaminante de pH neutro diseñado para  eliminar la oxidación de materiales ferrosos en diversas partes del vehículo. Su fórmula actúa profundamente eliminando el hollín de freno en las ruedas y la contaminación ferrosa en la pintura y otras superficies externas.",
     img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
 },
 {
@@ -153,7 +196,7 @@ const products = [
             price: 335
         },
         {
-            id: "1.5l",
+            id: "1.5L",
             presentation: "1.5 L",
             price: 743
         },
@@ -416,22 +459,127 @@ const products = [
     desc:"FOCUS es un potente eliminador de marcas de agua para vidrios y espejos. EI producto elimina eficazmente las marcas de agua de vidrios de automóviles, mamparas de ducha, espejos y cualquier tipo de vidrio, sin riesgo de dejar manchas.",
     img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
 },
-
 {
-    id:18,
-    name:"",
+    id:28,
+    name:"VERSE",
     brand:"VONIXX",
-    category:"Vidrios",
+    category:"Plásticos",
     variants: [
         {
             id: "500ml",
             presentation: "500 ml",
-            price: 
+            price: 373
+        },
+    ],
+    desc:"VERSE es un renovador y acondicionador base agua diseñado para proteger una amplia variedad de superficies contra los daños causados por los rayos IJV. Su fórmula versátil es ideal tanto para el cuidado estético como para el mantenimiento mecánico.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:29,
+    name:"TRYON",
+    brand:"VONIXX",
+    category:"Plásticos",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 260
+        },
+    ],
+    desc:"Tryon es un acondicionador de plásticos 3 en 1, desarrollado para restaurar plásticos y gomas internos y externos. EI producto es a base de agua y contiene Si02 en su fórmula, 10 que proporciona una gran durabilidad. Protege los plásticos internos hasta durante 12 meses, los plásticos exteriores hasta 3 meses y los gomas hasta 6 meses. EI producto ofrece renovación y repelencia al agua, manteniendo la superficie protegida.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:30,
+    name:"RESTAURAX AEROSOL",
+    brand:"VONIXX",
+    category:"Plásticos",
+    variants: [
+        {
+            id: "400ml",
+            presentation: "400 ml",
+            price: 241
+        },
+    ],
+    desc:"RESTAURAX renueva y restaura superficies de plástico como parachoques, paneles y laterales de las puertas. Su fórmula contiene polímeros especiales que también protegen las partes contra las acciones del tiempo, evitando la degradación temprana del material.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:31,
+    name:"RESTAURAX",
+    brand:"VONIXX",
+    category:"Plásticos",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 349
+        },
+    ],
+    desc:"RESTAURAX renueva y restaura superficies de plástico como parachoques, paneles y laterales de las puertas. Su fórmula contiene polímeros especiales que también protegen las partes contra las acciones del tiempo, evitando la degradación temprana del material.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:32,
+    name:"INTENSE",
+    brand:"VONIXX",
+    category:"Plásticos",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 191
+        },
+    ],
+    desc:"INTENSE es un renovador de plástico con protección UV, cuya fórmula equilibrada promueve el acabado natural y el tacto seco, con una durabilidad de 6 meses. EI producto debe utilizarse específicamente en el interior del coche, en superficies como el vinilo y los plásticos en general.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:33,
+    name:"HIGICOURO",
+    brand:"VONIXX",
+    category:"Piel",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 153
+        },
+    ],
+    desc:"HIGICOURO es un producto desarrollado para la limpieza segura de superficies de piel. Su fórmula permite eliminar impurezas con extrema facilidad, garantizando el cuidado del material sin causar daños. Limpia con seguridad asientos y otras superficies, renueva impurezas con extrema facilidad, sin agredir el material y renovando su aspecto.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:34,
+    name:"HIDRACOURO",
+    brand:"VONIXX",
+    category:"Piel",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 239
+        },
+    ],
+    desc:"HIDRACOURO es una solución especializada para hidratar y proteger asientos de piel. Su fórmula avanzada ayuda a conservar la flexibilidad y el acabado natural de la piel, prolongando su vida útil. Su fórmula en base de lanolina evita el resecamiento del material, manteniéndolo con aspecto a nuevo",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+
+{
+    id:29,
+    name:"",
+    brand:"VONIXX",
+    category:"Piel",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 1
         },
         {
             id: "5L",
             presentation: "5L",
-            price: 
+            price: 1
         },
     ],
     desc:"",
