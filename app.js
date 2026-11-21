@@ -137,7 +137,20 @@ function renderCart(){
 function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2300)}
 function openCart(){ $("#cartDrawer").classList.add("open");$("#drawerBackdrop").classList.add("show");document.body.style.overflow="hidden"}
 function closeCart(){ $("#cartDrawer").classList.remove("open");$("#drawerBackdrop").classList.remove("show");document.body.style.overflow=""}
-$("#productGrid")?.addEventListener("click",e=>{const b=e.target.closest("[data-add]");if(!b)return;const id=Number(b.dataset.add);cart[id]=(cart[id]||0)+1;saveCart();toast("Producto agregado al carrito")});
+$("#productGrid").addEventListener("click", e => {
+    const button = e.target.closest("[data-add]");
+    if (!button) return;
+    const productId = Number(button.dataset.add);
+    const product = products.find(
+        p => p.id === productId
+    );
+    const select = $(`#variant-${productId}`);
+    const variantId = select.value;
+    const key = `${productId}-${variantId}`;
+    cart[key] = (cart[key] || 0) + 1;
+    saveCart();
+    toast("Producto agregado al carrito");
+});
 $("#cartItems").addEventListener("click",e=>{const q=e.target.closest("[data-qty]"),r=e.target.closest("[data-remove]");if(q){const id=q.dataset.qty;cart[id]=(cart[id]||0)+Number(q.dataset.delta);if(cart[id]<=0)delete cart[id];saveCart()}if(r){delete cart[r.dataset.remove];saveCart()}});
 $("#categoryTabs")?.addEventListener("click",e=>{const b=e.target.closest("button[data-category]");if(!b)return;activeCategory=b.dataset.category;document.querySelectorAll("#categoryTabs button").forEach(x=>x.classList.toggle("active",x===b));renderProducts()});
 $("#productSearch")?.addEventListener("input",renderProducts);$("#searchBtn")?.addEventListener("click",renderProducts);
