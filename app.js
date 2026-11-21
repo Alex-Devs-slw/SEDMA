@@ -47,12 +47,66 @@ const products = [
 ];
 let activeCategory="Todos",cart=JSON.parse(localStorage.getItem("sedmaCart")||"{}");
 const $=s=>document.querySelector(s), money=n=>n.toLocaleString("es-MX",{style:"currency",currency:"MXN"});
+
 function renderProducts(){
- if(!$("#productGrid"))return;
- const q=$("#productSearch").value.trim().toLowerCase();
- const filtered=products.filter(p=>(activeCategory==="Todos"||p.category===activeCategory)&&(`${p.name} ${p.brand} ${p.category} ${p.desc}`).toLowerCase().includes(q));
- $("#resultCount").textContent=`${filtered.length} ${filtered.length===1?"producto":"productos"}`;
- $("#productGrid").innerHTML=filtered.length?filtered.map(p=>`<article class="product-card"><div class="product-image"><img src="${p.img}" alt="${p.name}" loading="lazy"><span class="product-category">${p.category.toUpperCase()}</span></div><div class="product-info"><span class="product-brand">${p.brand}</span><h3>${p.name}</h3><p>${p.desc}</p><div class="product-bottom"><span class="product-price">${money(p.price)}</span><button class="add-btn" data-add="${p.id}">+ AGREGAR</button></div></div></article>`).join(""):`<div class="no-results">No encontramos productos con esa búsqueda. Intenta con otro término.</div>`;
+    const q = $("#productSearch").value.trim().toLowerCase();
+    const filtered = products.filter(p => {
+        return (
+            (activeCategory === "Todos" || p.category === activeCategory) &&
+            (`${p.name} ${p.brand} ${p.category} ${p.desc}`)
+                .toLowerCase()
+                .includes(q)
+        );
+    });
+    $("#resultCount").textContent =
+        `${filtered.length} productos`;
+    $("#productGrid").innerHTML = filtered.map(p => {
+        const variants = p.variants || [
+            {
+                id: "unica",
+                presentation: "Presentación única",
+                price: p.price
+            }
+        ];
+        return `
+        <article class="product-card">
+            <div class="product-image">
+                <img src="${p.img}" alt="${p.name}">
+                <span class="product-category">
+                    ${p.category.toUpperCase()}
+                </span>
+            </div>
+            <div class="product-info">
+                <span class="product-brand">
+                    ${p.brand}
+                </span>
+                <h3>${p.name}</h3>
+                <p>${p.desc}</p>
+                <label class="variant-label">
+                    PRESENTACIÓN
+                </label>
+                <select class="variant-select"
+                    id="variant-${p.id}">
+                    ${variants.map(v => `
+                        <option value="${v.id}">
+                            ${v.presentation} - ${money(v.price)}
+                        </option>
+                    `).join("")}
+                </select>
+                <div class="product-bottom">
+                    <span class="product-price"
+                        id="price-${p.id}">
+                        ${money(variants[0].price)}
+                    </span>
+                    <button class="add-btn"
+                        data-add="${p.id}">
+                        + AGREGAR
+                    </button>
+                </div>
+            </div>
+        </article>
+        `;
+    }).join("");
 }
 function saveCart(){localStorage.setItem("sedmaCart",JSON.stringify(cart));renderCart()}
 function cartProducts(){return Object.entries(cart).map(([id,qty])=>({...products.find(p=>p.id===Number(id)),qty})).filter(p=>p.id)}
