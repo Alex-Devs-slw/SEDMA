@@ -42,8 +42,401 @@ const products = [
     desc:"Su fórmula exclusiva promueve una alta eficacia en la eliminación de las manchas producidas por el impacto de los insectos, la grasa y la suciedad. IMPACT es un limpiador universal, respetuoso con el medio ambiente y no corrosivo diseñado para la limpieza dificil de varias superficies.",
     img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
 },
+{
+    id:4,
+    name:"V-FLOC Shampoo Concentrado",
+    brand:"VONIXX",
+    category:"Limpieza General",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 140
+        },
+        {
+            id: "1.5l",
+            presentation: "1.5 L",
+            price: 308
+        },
+        {
+            id: "5l",
+            presentation: "5 L",
+            price: 697
+        }
+    ],
+    desc:"V-FLOC es un shampoo de pH neutro diseñado para un lavado suave y de alta eficiencia. Su fórmula avanzada con acondicionadores especiales ofrece un alto grado de lubricación, reduciendo significativamente la fricción y el riesgo de micro-rayas durante el proceso de limpieza.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:5,
+    name:"Hydrox Wash Shampoo Cerámico 500ml",
+    brand:"VONIXX",
+    category:"Limpieza General",
+    price: 468,
+    desc:"Vonixx Hydrox Wash es un innovador shampoo automotriz que combina limpieza profunda y protección cerámica en un solo paso. Su fórmula avanzada con Si02 simplifica el mantenimiento del vehículo, proporcionando un acabado de alto nivel con una durabilidad de hasta 4 meses.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:6,
+    name:"V-ECO Fast 500ml",
+    brand:"VONIXX",
+    category:"Limpieza General",
+    price: 148,
+    desc:"V-ECO FAST es un producto para el lavado ecológico de vehículos, biodegradable y respetuoso con el medio ambiente. Contiene en Su composición tensioactivos, solventes ecológicos y cera de carnauba que actúan juntos para una limpieza más eficaz y con menos posibilidades de riesgos en la pintura. V-ECO FAST promueve el brillo y la protección ligera.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:7,
+    name:"V-ECO Pro 1.5L",
+    brand:"VONIXX",
+    category:"Limpieza General",
+    price: 412,
+    desc:"V-ECO PRO es una solución avanzada de limpieza en seco, ecológica y biodegradable. Su fórmula combina tensioactivos, solventes ecológicos y cera de carnauba, permitiendo una limpieza profunda y segura que minimiza el riesgo de rayaduras, mientras aporta un brillo renovado y protección duradera.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:8,
+    name:"Alumax Desincrustante Ácido 20L",
+    brand:"VINTEX",
+    category:"Limpieza General",
+    price: 2,143,
+    desc:"Alumax es un desincrustante de carácter ácido, desarrollado para la limpieza de llantas, chasis, motores, compartimientos de aluminio, carrocerías de acero inoxidable y madera.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:9,
+    name:"Removex Desengrasante y Limpiador de Chasis 20L",
+    brand:"VINTEX",
+    category:"Limpieza General",
+    price: 1,722,
+    desc:"Alumax es un desincrustante de carácter ácido, desarrollado para la limpieza de llantas, chasis, motores, compartimientos de aluminio, carrocerías de acero inoxidable y madera.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:10,
+    name:"IZER Removedor de Óxidos",
+    brand:"VONIXX",
+    category:"Limpieza General",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 202
+        },
+        {
+            id: "1.5l",
+            presentation: "1.5 L",
+            price: 401
+        },
+    ],
+    desc:"IZER es un potente descontaminante de pH neutro diseñado para  liminar la oxidación de materiales ferrosos en diversas partes del vehículo. Su fórmula actúa profundamente eliminando el hollín de freno en las ruedas y la contaminación ferrosa en la pintura y otras superficies externas.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:11,
+    name:"REZET Revelador de Hologramas y Descontaminante de Pintura500ml",
+    brand:"ZACS",
+    category:"Limpieza General",
+    price: 198,
+    desc:"Rezet es un limpiador de alto rendimiento para uso posterior al pulido. Su función es eliminar aceites y residuos de compuestos para revelar el estado real de la superficie (hologramas e imperfecciones). ",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:12,
+    name:"STRIKE Removedor de Alquitrán y Adhesivos",
+    brand:"VONIXX",
+    category:"Limpieza General",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 335
+        },
+        {
+            id: "1.5l",
+            presentation: "1.5 L",
+            price: 743
+        },
+    ],
+    desc:"STRIKE es un producto de fórmula equilibrada diseñado específicamente para la eliminación de contaminantes difíciles. Su composición permite una limpieza segura y eficaz sin dañar las superficies. ",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:13,
+    name:"VEXUS Ruedas y Motores 500ml",
+    brand:"VONIXX",
+    category:"Limpieza General",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 140
+        },
+    ],
+    desc:"VEXUS es un limpiador de alto rendimiento, desarrollado especialmente para la limpieza de ruedas y motores. EI producto elimina la suciedad sin dañar las ruedas y las piezas del motor, ya sea plástico, pintura, goma o metal.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:14,
+    name:"FLEXUS Limpiador y Acondicionador",
+    brand:"VONIXX",
+    category:"Limpieza General",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 264
+        },
+    ],
+    desc:"Limpiador y acondicionador 2 en 1 para plásticos interiores que limpia, protege y renueva en una sola etapa. Con Si02 en su fórmula, ofrece un acabado seco al tacto, mantiene la apariencia original y garantiza protección hasta por 3 meses.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:15,
+    name:"FLEXUS Limpiador y Acondicionador",
+    brand:"VONIXX",
+    category:"Limpieza General",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 264
+        },
+    ],
+    desc:"Limpiador y acondicionador 2 en 1 para plásticos interiores que limpia, protege y renueva en una sola etapa. Con Si02 en su fórmula, ofrece un acabado seco al tacto, mantiene la apariencia original y garantiza protección hasta por 3 meses.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:16,
+    name:"SINTRA Pro",
+    brand:"VONIXX",
+    category:"Limpieza General",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 265
+        },
+        {
+            id: "1.5L",
+            presentation: "1.5L",
+            price: 510
+        },
+    ],
+    desc:"SINTRA PRO es un multi limpiador, bactericida y germicida de pH alcalino y ultra concentrado, indicado para la limpieza de paneles, laterales y esquinas de puertas, encimeras de Cuero, alfombras y tapicería. Promueve un alto poder de eliminación de manchas de grasa y diversas suciedades.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:17,
+    name:"EXTRACTUS",
+    brand:"VONIXX",
+    category:"Extracción",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 190
+        },
+        {
+            id: "1.5L",
+            presentation: "1.5L",
+            price: 400
+        },
+    ],
+    desc:"Extractus es un limpiador ultra concentrado de alto rendimiento y bajo contenido de espuma, desarrollado para la limpieza profesional de tapicería y alfombras.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:18,
+    name:"BACTRAN",
+    brand:"VONIXX",
+    category:"Extracción",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 200
+        },
+        {
+            id: "1.5L",
+            presentation: "1.5L",
+            price: 410
+        },
+    ],
+    desc:"Bactran es un limpiador bactericida y fungicida 7 en 1 ultra concentrado para la limpieza profesional de tapicerías y tejidos. Su fórmula de pH ácido elimina eficazmente manchas difíciles siendo ideal para su uso con máquinas extractoras.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:19,
+    name:"SANITIZANTE",
+    brand:"VONIXX",
+    category:"Extracción",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 210
+        },
+        {
+            id: "1.5L",
+            presentation: "1.5L",
+            price: 427
+        },
+    ],
+    desc:"EI Sanitizante Vonixx es un producto 4 en 1, desarrollado exclusivamente para la última fase de limpieza de tapicería y alfombras. Su fórmula elimina gérmenes, bacterias y deja un residuo activo con efecto bacteriostático, reduciendo las probabilidades de crecimiento germinal hasta por 3 meses.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:20,
+    name:"DELET",
+    brand:"VONIXX",
+    category:"Neumáticos",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 190
+        },
+        {
+            id: "5L",
+            presentation: "5L",
+            price: 538
+        },
+    ],
+    desc:"DELET es un limpiador de alto rendimiento formulado exclusivamente para eliminar la suciedad y la grasa de los neumáticos y las piezas de goma, devolviendo un color original limpio sin aspecto grisáceo. Ayudará a mejorar el rendimiento de los productos acondicionadores de neumáticos.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:21,
+    name:"REVOX",
+    brand:"VONIXX",
+    category:"Neumáticos",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 236
+        },
+    ],
+    desc:"REVOX es un sellador de neumáticos sintético, formulado para proteger y renovar su aspecto, además de un acabado satinado.  REVOX es extremadamente resistente al barro y a la lluvia, dejando el neumático limpio durante más tiempo.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:22,
+    name:"REXER",
+    brand:"VONIXX",
+    category:"Neumáticos",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 316
+        },
+    ],
+    desc:"REXER es un restaurador de neumáticos pigmentado de alta durabilidad diseñado para ofrecer un acabado impecable y duradero. Su fórmula avanzada permite obtener resultados profesionales en un solo paso.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:23,
+    name:"SHINY",
+    brand:"VONIXX",
+    category:"Neumáticos",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 306
+        },
+    ],
+    desc:"SHINY es un producto diseñado para renovar y proteger los neumáticos, proporcionando un brillo intenso y duradero. Su fórmula de alta resistencia mantiene un aspecto impecable incluso en condiciones adversas. EI producto no sale al entrar en contacto con agua, y puede durar hasta 60 días manteniendo la apariencia de brillo húmedo.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:24,
+    name:"OPTY",
+    brand:"VONIXX",
+    category:"Vidrios",
+    variants: [
+        {
+            id: "24Oml",
+            presentation: "240 ml",
+            price: 600
+        },
+    ],
+    desc:"OPTY es un compuesto de alto rendimiento exclusivamente para el tratamiento de superficies vítrea. Su fórmula especializada permite restaurar la claridad y transparencia del cristal con máxima eficiencia.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:25,
+    name:"GLAZY",
+    brand:"VONIXX",
+    category:"Vidrios",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 183
+        },
+        {
+            id: "5L",
+            presentation: "5L",
+            price: 688
+        },
+    ],
+    desc:"Desarrollado para vidrio en general que limpia, protege, acondiciona y actúa como reductor d riesgos. Reduce las posibilidades de rayones causados por los limpiaparabrisas.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:26,
+    name:"PRIZM",
+    brand:"VONIXX",
+    category:"Vidrios",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 176
+        },
+    ],
+    desc:"PRIZM restaura la transparencia en vidrios de automóviles y remueve marcas de agua incrustada, impurezas y contaminantes que no salen con la limpieza convencional. EI producto actúa químicamente contra manchas y suciedad, removiéndolas fácilmente del parabrisas, vidrios laterales y traseros",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
+{
+    id:27,
+    name:"FOCUS",
+    brand:"VONIXX",
+    category:"Vidrios",
+    variants: [
+        {
+            id: "240ml",
+            presentation: "240 ml",
+            price: 241
+        },
+    ],
+    desc:"FOCUS es un potente eliminador de marcas de agua para vidrios y espejos. EI producto elimina eficazmente las marcas de agua de vidrios de automóviles, mamparas de ducha, espejos y cualquier tipo de vidrio, sin riesgo de dejar manchas.",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
 
- 
+{
+    id:18,
+    name:"",
+    brand:"VONIXX",
+    category:"Vidrios",
+    variants: [
+        {
+            id: "500ml",
+            presentation: "500 ml",
+            price: 
+        },
+        {
+            id: "5L",
+            presentation: "5L",
+            price: 
+        },
+    ],
+    desc:"",
+    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+},
 ];
 let activeCategory="Todos",cart=JSON.parse(localStorage.getItem("sedmaCart")||"{}");
 const $=s=>document.querySelector(s), money=n=>n.toLocaleString("es-MX",{style:"currency",currency:"MXN"});
