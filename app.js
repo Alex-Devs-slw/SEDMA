@@ -128,11 +128,85 @@ $("#productGrid").addEventListener("change", e => {
         money(selected.price);
 });
 function saveCart(){localStorage.setItem("sedmaCart",JSON.stringify(cart));renderCart()}
-function cartProducts(){return Object.entries(cart).map(([id,qty])=>({...products.find(p=>p.id===Number(id)),qty})).filter(p=>p.id)}
-function renderCart(){
- const items=cartProducts(),count=items.reduce((s,p)=>s+p.qty,0),subtotal=items.reduce((s,p)=>s+p.price*p.qty,0);
- $("#cartCount").textContent=count;$("#drawerCount").textContent=`(${count})`;$("#cartSubtotal").textContent=money(subtotal);$("#checkoutTotal").textContent=money(subtotal);$("#checkoutBtn").disabled=!count;
- $("#cartItems").innerHTML=items.length?items.map(p=>`<div class="cart-row"><img src="${p.img}" alt=""><div><h4>${p.name}</h4><small>${money(p.price)}</small><div class="qty-controls"><button data-qty="${p.id}" data-delta="-1">−</button><span>${p.qty}</span><button data-qty="${p.id}" data-delta="1">+</button></div></div><button class="remove-item" data-remove="${p.id}" aria-label="Eliminar">×</button></div>`).join(""):`<div class="empty-cart">Tu carrito está vacío.<br><span>Agrega productos para comenzar.</span></div>`;
+function cartProducts() {
+    return Object.entries(cart).map(([key, qty]) => {
+        const [productId, variantId] = key.split("-");
+        const product = products.find(
+            p => p.id === Number(productId)
+        );
+        if (!product) return null;
+        const variants = product.variants || [{
+            id: "unica",
+            presentation: "Presentación única",
+            price: product.price
+        }];
+        const variant = variants.find(
+            v => v.id === variantId
+        );
+        if (!variant) return null;
+        return {
+            ...product,
+            variantId,
+            presentation: variant.presentation,
+            price: variant.price,
+            qty,
+            cartKey: key
+        };
+    }).filter(Boolean);
+}
+function renderCart() {
+    const items = cartProducts();
+    const count = items.reduce(
+        (s, p) => s + p.qty, 0
+    );
+    const subtotal = items.reduce(
+        (s, p) => s + p.price * p.qty, 0
+    );
+    $("#cartCount").textContent = count;
+    $("#drawerCount").textContent = `(${count})`;
+    $("#cartSubtotal").textContent = money(subtotal);
+    $("#checkoutTotal").textContent = money(subtotal);
+    $("#checkoutBtn").disabled = !count;
+    $("#cartItems").innerHTML = items.length
+        ? items.map(p => `
+            <div class="cart-row">
+                <img src="${p.img}" alt="${p.name}">
+                <div>
+                    <h4>${p.name}</h4>
+                    <small>
+                        ${p.presentation}
+                    </small>
+                    <small>
+                        ${money(p.price)}
+                    </small>
+                    <div class="qty-controls">
+                        <button
+                            data-qty="${p.cartKey}"
+                            data-delta="-1">
+                            −
+                        </button>
+                        <span>${p.qty}</span>
+                        <button
+                            data-qty="${p.cartKey}"
+                            data-delta="1">
+                            +
+                        </button>
+                    </div>
+                </div>
+                <button
+                    class="remove-item"
+                    data-remove="${p.cartKey}"
+                    aria-label="Eliminar">
+                    ×
+                </button>
+            </div>
+        `).join("")
+        : `
+            <div class="empty-cart">
+                Tu carrito está vacío.<br>
+                <span>Agrega productos para comenzar.</span>
+            </div>
+        `;
 }
 function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2300)}
 function openCart(){ $("#cartDrawer").classList.add("open");$("#drawerBackdrop").classList.add("show");document.body.style.overflow="hidden"}
@@ -151,7 +225,24 @@ $("#productGrid").addEventListener("click", e => {
     saveCart();
     toast("Producto agregado al carrito");
 });
-$("#cartItems").addEventListener("click",e=>{const q=e.target.closest("[data-qty]"),r=e.target.closest("[data-remove]");if(q){const id=q.dataset.qty;cart[id]=(cart[id]||0)+Number(q.dataset.delta);if(cart[id]<=0)delete cart[id];saveCart()}if(r){delete cart[r.dataset.remove];saveCart()}});
+$("#cartItems").addEventListener("click", e => {
+    const quantityButton = e.target.closest("[data-qty]");
+    const removeButton = e.target.closest("[data-remove]");
+    if (quantityButton) {
+        const key = quantityButton.dataset.qty;
+        cart[key] = (cart[key] || 0) +
+            Number(quantityButton.dataset.delta);
+        if (cart[key] <= 0) {
+            delete cart[key];
+        }
+        saveCart();
+    }
+    if (removeButton) {
+        const key = removeButton.dataset.remove;
+        delete cart[key];
+        saveCart();
+    }
+});
 $("#categoryTabs")?.addEventListener("click",e=>{const b=e.target.closest("button[data-category]");if(!b)return;activeCategory=b.dataset.category;document.querySelectorAll("#categoryTabs button").forEach(x=>x.classList.toggle("active",x===b));renderProducts()});
 $("#productSearch")?.addEventListener("input",renderProducts);$("#searchBtn")?.addEventListener("click",renderProducts);
 $("#openCart").addEventListener("click",openCart);$("#closeCart").addEventListener("click",closeCart);$("#drawerBackdrop").addEventListener("click",closeCart);
