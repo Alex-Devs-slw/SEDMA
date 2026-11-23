@@ -22,7 +22,7 @@ const products = [
         }
     ],
     desc:"V-MOL es un limpiador automotriz ligeramente alcalino y no agresivo que es ideal para lavar autos, especialmente para eliminar suciedad difícil como barro y aceite.",
-    img:"https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?auto=format&fit=crop&w=700&q=85"
+    img:"cat_imgs/v_mol.avif"
 },
 {
     id:2,
@@ -37,7 +37,7 @@ const products = [
         },
     ],
     desc:"CITRON es un shampoo de alto poder formulado con tensoactivos especiales y solventes naturales extraídos de la cáscara de naranja. Es la solución ideal para lavados pesados, garantizando una limpieza profunda de la pintura automotriz.",
-    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+    img:"cat_imgs/citron.avif"
 },
 {
     id:3,
@@ -53,7 +53,7 @@ const products = [
         },
     ],
     desc:"Su fórmula exclusiva promueve una alta eficacia en la eliminación de las manchas producidas por el impacto de los insectos, la grasa y la suciedad. IMPACT es un limpiador universal, respetuoso con el medio ambiente y no corrosivo diseñado para la limpieza dificil de varias superficies.",
-    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+    img:"cat_imgs/impact.jxl"
 },
 {
     id:4,
@@ -78,7 +78,7 @@ const products = [
         }
     ],
     desc:"V-FLOC es un shampoo de pH neutro diseñado para un lavado suave y de alta eficiencia. Su fórmula avanzada con acondicionadores especiales ofrece un alto grado de lubricación, reduciendo significativamente la fricción y el riesgo de micro-rayas durante el proceso de limpieza.",
-    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+    img:"cat_imgs/vfloc.avif"
 },
 {
     id:5,
@@ -93,7 +93,7 @@ const products = [
         },
     ],
     desc:"Vonixx Hydrox Wash es un innovador shampoo automotriz que combina limpieza profunda y protección cerámica en un solo paso. Su fórmula avanzada con Si02 simplifica el mantenimiento del vehículo, proporcionando un acabado de alto nivel con una durabilidad de hasta 4 meses.",
-    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+    img:"cat_imgs/hydroxwash.avif"
 },
 {
     id:6,
@@ -547,7 +547,7 @@ const products = [
         },
     ],
     desc:"HIGICOURO es un producto desarrollado para la limpieza segura de superficies de piel. Su fórmula permite eliminar impurezas con extrema facilidad, garantizando el cuidado del material sin causar daños. Limpia con seguridad asientos y otras superficies, renueva impurezas con extrema facilidad, sin agredir el material y renovando su aspecto.",
-    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+    img:"cat_imgs/higicouro.jxl"
 },
 {
     id:34,
@@ -562,7 +562,7 @@ const products = [
         },
     ],
     desc:"HIDRACOURO es una solución especializada para hidratar y proteger asientos de piel. Su fórmula avanzada ayuda a conservar la flexibilidad y el acabado natural de la piel, prolongando su vida útil. Su fórmula en base de lanolina evita el resecamiento del material, manteniéndolo con aspecto a nuevo",
-    img:"https://images.unsplash.com/photo-1611599531550-1f3c5e4b6f8e?auto=format&fit=crop&w=700&q=85"
+    img:"cat_imgs/hidracouro.avif"
 },
 
 {
